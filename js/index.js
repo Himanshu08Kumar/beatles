@@ -57,3 +57,32 @@ turnClockwiseBtn.addEventListener("click", turnClockwise);
 turnAntiClockwiseBtn.addEventListener("click", turnAntiClockwise);
 homeBtn.addEventListener("click", home);
 
+document.addEventListener("keydown", (e) => {
+    const { key } = e;
+    switch (key) {
+      case "ArrowUp":
+        stepUp();
+        break;
+      case "ArrowDown":
+        stepDown();
+        break;
+      case "ArrowLeft":
+        stepLeft();
+        break;
+      case "ArrowRight":
+        stepRight();
+        break;
+  
+      case '[':
+          turnAntiClockwise();
+          break;
+      case  ']':
+          turnClockwise();
+          break;
+      case 'H':
+          case 'h':
+              home();
+              break;
+  
+    }
+  });
